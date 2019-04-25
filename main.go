@@ -5,6 +5,14 @@ import (
 	"hello-go/greet"
 )
 
+func Add(value1 int, value2 int) int {
+	return value1 + value2
+}
+
+func Subtract(value1 int, value2 int) int {
+	return value1 - value2
+}
+
 func main() {
 	fmt.Println("Variable from nested package: " + greet.Morning)
 	fmt.Println("Package variable usage: ", snapshot)
@@ -36,7 +44,7 @@ func main() {
 
 	readFile()
 
-	yamlOps()
+	//yamlOps()
 
 }
 
