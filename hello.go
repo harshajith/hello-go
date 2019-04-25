@@ -34,6 +34,8 @@ func main() {
 
 	testInterfaces()
 
+	readFile()
+
 }
 
 func testInterfaces() {
