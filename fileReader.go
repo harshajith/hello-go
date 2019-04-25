@@ -9,14 +9,14 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-type vpnRegistry struct {
-	entries []vpnConfig
-}
+// type vpnRegistry struct {
+// 	entries []vpnConfig
+// }
 
-type vpnConfig struct {
-	name   string
-	owners []string
-	ports  map[string]int
+type V struct {
+	Name   string
+	Owners []string
+	Ports  map[interface{}]interface{}
 }
 
 func readFile() {
@@ -28,13 +28,13 @@ func readFile() {
 	body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(body))
 
-	vpnReg := vpnConfig{}
+	vpnReg := V{}
 
 	err = yaml.Unmarshal(body, &vpnReg)
 	if err != nil {
 		log.Print(err)
 	}
 
-	fmt.Println(vpnReg.name)
+	fmt.Println(vpnReg)
 
 }

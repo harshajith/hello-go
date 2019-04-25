@@ -36,6 +36,8 @@ func main() {
 
 	readFile()
 
+	yamlOps()
+
 }
 
 func testInterfaces() {
